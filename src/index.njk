@@ -3,9 +3,7 @@ layout: base.njk
 ---
 
 <main>
-    <h1>Data dump</h1>
-    <p>Min github user: {{ github.login }} och plats: {{ github.location }}.</p>
-    <p>Läskigt</p>
+    
     <div>
         {% asyncAll  item in unsplash.results %}
             <!-- <pre>{{ item | dump(2) }}</pre> -->
@@ -18,7 +16,7 @@ layout: base.njk
     <div class="container2">
         {% asyncAll item in spotify %}
         <!---    <pre>{{ item | dump(2) }}</pre> -->
-           <p>{{ item.name.nativeName.swe.official }}</p>
+           <p id="111">{{ item.name.nativeName.swe.official }}</p>
         {% endall %}
     </div>
 </main>
